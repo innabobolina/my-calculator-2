@@ -34,7 +34,7 @@ def output_function(user_input):
         return cube(num1)
     elif operand == "pow":
         return power(num1, num2)
-    else: 
+    elif operand == "%":
         return mod(num1, num2)
 
 
