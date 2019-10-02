@@ -11,12 +11,32 @@ from arithmetic import *
 def output_function(user_input):
     input_lst = user_input.split(" ")
     
-    operand = input_lst[0]
-    num1 = int(input_lst[1])
-    num2 = int(input_lst[2])
+    if len(input_lst) == 3:
+        operand = input_lst[0]
+        num1 = int(input_lst[1])
+        num2 = int(input_lst[2])
+    else:
+        operand = input_lst[0]
+        num1 = int(input_lst[1])
+
 
     if operand == "+":
         return add(num1, num2)
+    elif operand == "-":
+        return subtract(num1, num2)
+    elif operand == "*":
+        return multiply(num1, num2)
+    elif operand == "/":
+        return divide(num1, num2)
+    elif operand == "square":
+        return square(num1)
+    elif operand == "cube":
+        return cube(num1)
+    elif operand == "pow":
+        return power(num1, num2)
+    else: 
+        return mod(num1, num2)
+
 
 
 def main():
